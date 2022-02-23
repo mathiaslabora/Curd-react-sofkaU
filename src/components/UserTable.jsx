@@ -2,6 +2,7 @@ import React from 'react';
 
 const UserTable = (props) => (
     
+
     <table>
       <thead>
         <tr>
@@ -15,10 +16,11 @@ const UserTable = (props) => (
         props.users.map((user) => (
           <tr key={user.id}>
             <td>{user.name}</td>
-            <td>{user.username}</td>
+            <td>{user.userName}</td>
             <td>
               <button
                className="button muted-button"
+               onClick={()=>{props.editRow(user)}}
                >Edit</button>
               <button 
               className="button muted-button"
